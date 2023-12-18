@@ -5,4 +5,4 @@
 `cmake --build build`
 
 ## To run
-./build/pong.exe
+`./build/pong.exe`
