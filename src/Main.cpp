@@ -1,15 +1,14 @@
 #include <iostream>
 
-#include "SDL2/SDL.h"
+#include "Game.h"
 
 int main() {
-    std::cout << "Initializing SDL..." << std::endl;
-    SDL_Init( SDL_INIT_EVERYTHING );
-    std::cout << "Done!" << std::endl;
-
-    std::cout << "Quitting SDL..." << std::endl;
-    SDL_Quit();
-    std::cout << "Done!" << std::endl;
+    Game game;
+    bool success = game.initialize();
+    if (success) {
+        game.runLoop();
+    }
+    game.shutdown();
 
     return 0;
 }
